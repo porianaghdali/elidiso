@@ -35,22 +35,22 @@ export default function Product() {
      lg:grid-cols-4"
       >
         {products.map((item, index) => (
-          <div key={index} className="p-3 bg-white rounded-xl">
+          <div key={index} className="p-3 bg-white rounded-xl overflow-hidden">
             <Image
               src={item.image}
               alt={item.title}
               width={400}
               height={250}
-              className="rounded-lg"
+              className="rounded-lg max-h-70"
             />
-            <div className="text-[#212121] flex justify-between items-center">
+            <div className="text-[#212121] flex justify-between items-center gap-4">
               <Link
                 href={`/product/${item.id}`}
-                className="px-3 py-2 rounded-md  w-fit border text-xs hover:bg-gray-200"
+                className="px-3 py-2 whitespace-nowrap  rounded-md  w-fit border text-xs hover:bg-gray-200"
               >
                 READ MORE
               </Link>
-              <h2 className="font-medium text-sm">{item.title}</h2>
+              <h2 className="font-medium text-sm whitespace-nowrap">{item.title}</h2>
             </div>
           </div>
         ))}

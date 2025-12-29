@@ -1,71 +1,39 @@
 import Image from "next/image";
 import PrimaryCard from "@/ui/primeryCard";
-export default function IOTSection() {
-  const IOT = [
+export default function EnvironmentalMonitoringSection() {
+
+
+  const list = [
     {
       number: "01",
-      describtion: "Compatible with both internal and cloud servers.",
+      describtion: "Real-time dashboards & alerts",
     },
     {
       number: "02",
       describtion:
-        "Includes sensors for temperature, humidity, voltage, water leaks, smoke, and flammable gases.",
+        "SMS, email, and call notifications",
     },
     {
       number: "03",
       describtion:
-        "Automates crisis response across pre-crisis, crisis, and post-crisis stages.",
+        "Scenario automation & threshold control",
     },
     {
       number: "04",
       describtion:
-        "Supports GSM modems for SMS, email, and calls, along with network and wireless connectivity.",
+        "Trend charts and historical graphs",
     },
     {
       number: "05",
       describtion:
-        "Provides a practical, intuitive interface for effortless control.",
+        "Admin/User role management",
     },
     {
       number: "06",
       describtion:
-        "A replaceable backup battery ensures 24-hour operation during power outages.",
+        "Cloud or on-prem installation",
     },
-    {
-      number: "07",
-      describtion:
-        "Available in hardware, network-based, and network-based with performance control versions.",
-    },
-    {
-      number: "08",
-      describtion: "Admin and User roles with tailored specifications.",
-    },
-    {
-      number: "09",
-      describtion: "Displays parameter values, alerts, and notifications.",
-    },
-    {
-      number: "10",
-      describtion: "Allows categorized monitoring and remote display.",
-    },
-    {
-      number: "11",
-      describtion:
-        "Set alarm points, define scenarios, and control environmental systems.",
-    },
-    {
-      number: "12",
-      describtion: "View charts and graphs over specific intervals.",
-    },
-    {
-      number: "13",
-      describtion: "Can be installed on customer-specified servers.",
-    },
-    {
-      number: "14",
-      describtion:
-        "Receive system warnings directly in the app for immediate attention.",
-    },
+   
   ];
   const IOTCard = [
     {
@@ -105,24 +73,13 @@ export default function IOTSection() {
     <>
       <div id="IoT" className="max-w-[1500px] mb-8 mx-auto px-[3vw] grid grid-cols-1 md:grid-cols-2 text-white gap-4">
         <h2 className="text-xl col-span-1 md:col-span-2  font-semibold">
-          IOT Software
-        </h2>
+		Elidiso Environmental Monitoring System      </h2>
         <div className=" ">
           <p className="text-justify mb-8">
-            Enhance your surroundings with our cutting-edge IoT Environmental
-            Monitoring System, an advanced solution for monitoring and
-            controlling environmental parameters across various sectors,
-            including agriculture, industry, medicine, and indoor environments.
-            This system leverages IoT technology to provide real-time monitoring
-            of critical factors like temperature, humidity, voltage, smoke,
-            water levels, and more, ensuring that your environment remains safe
-            and operational. Whether installed on internal servers or
-            cloud-based systems, our system offers a tailored solution to meet
-            your specific needs with a user-friendly interface that keeps you
-            effortlessly in tune with your data as never experienced before.
+         A powerful monitoring solution for data centers, industrial facilities, agriculture, and medical environments. EMS provides a clean, modern interface for tracking parameters, sending alerts, managing scenarios, analyzing trends, and automating crisis response. Deployable on cloud or customer servers.
           </p>
           <div className="mb-4">
-            {IOT.map((item) => {
+            {list.map((item) => {
               return (
                 <div key={item.number} className="flex gap-3 ">
                   <p className="py-2 px-3  border-t-[3px] border-[#31F3FF]">
@@ -147,13 +104,13 @@ export default function IOTSection() {
           </button>
         </div>
         <div className="flex justify-center">
-          <Image
+          {/* <Image
             src="/images/software.png"
             width={298}
             height={232}
             alt="server1"
             className="h-fit w-4/5"
-          />
+          /> */}
         </div>
       </div>
       <div id="Applications" className="mb-20 text-center flex justify-center lg:text-lg text-white max-w-[1500px] mx-auto">

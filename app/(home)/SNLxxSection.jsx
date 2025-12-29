@@ -1,39 +1,28 @@
 import PrimeryCard from "@/ui/primeryCard";
 import Image from "next/image";
-export default function SNLxxSection() {
-  const SNLxx = [
-    { number: "01", describtion: "Integrated Ethernet technology" },
+export default function ELSOxxSection() {
+  const ELSOxx = [
+    { number: "01", describtion: "Secure SNMPv3 communication" },
     {
       number: "02",
-      describtion: "Secure data transmission using SNMP-V3",
+      describtion: "LAN-based real-time monitoring",
     },
     {
       number: "03",
-      describtion: "Supports authentication types: MD5/SHA",
+      describtion: "Trap alerts for out-of-range events",
     },
     {
       number: "04",
-      describtion: "Supports encryption types: AES/DES",
+      describtion: "Web-based configuration",
     },
     {
       number: "05",
-      describtion: "Compatible with general SNMPV3 software",
+      describtion: "Optional battery backup",
     },
-    {
-      number: "06",
-      describtion: "Sends warnings via trap or physical siren alarm",
-    },
-    {
-      number: "07",
-      describtion: "Embedded web server for device configuration",
-    },
-    {
-      number: "08",
-      describtion: "Control devices through Infrared signals by user commands",
-    },
+
   ];
 
-  const SNLxxCard = [
+  const ELSOxxCard = [
     {
       src: "/images/temperature.png",
       title: "Humidity / Temperature",
@@ -59,7 +48,7 @@ export default function SNLxxSection() {
       title: "Siren Alarm",
     },
     {
-      src: "/images/Infrared.png",
+      src: "/images/infrared.png",
       title: "Infrared Transmitter",
     },
     {
@@ -73,23 +62,16 @@ export default function SNLxxSection() {
   ];
   return (
     <>
-      <div id="SNLxx" className="max-w-[1500px] mb-8 mx-auto px-[3vw] grid grid-cols-1 md:grid-cols-2 text-white gap-4">
+      <div id="ELSOxx" className="max-w-[1500px] mb-8 mx-auto px-[3vw] grid grid-cols-1 md:grid-cols-2 text-white gap-4">
         <h2 className="text-xl col-span-1 md:col-span-2  font-semibold">
-          SNLxx{" "}
+          ELSO.xx{" "}
         </h2>
         <div className=" ">
           <p className="text-justify mb-8">
-            The SNLxx node is designed for monitoring environmental parameters
-            such as temperature, humidity, and more. It can also receive remote
-            instructions from users in warning scenarios. The device is equipped
-            with a LAN port and an optional backup battery. Data transmission is
-            secured using the SNMP-V3 protocol. Sensor values can be gotten
-            through "Elidiso EMS software" or any other SNMP-V3 compatible
-            software. Additionally, in the event of an out-of-range parameter,
-            the SNLxx will send a real-time SNMP trap message.
+          Engineered for secure environmental monitoring, the ELSO.xx uses SNMPv3 encryption and authentication to deliver real-time sensor data and instant trap alerts. It integrates seamlessly with the Elidiso EMS platform and all SNMPv3 software, making it ideal for data centers, telecom rooms, and industrial environments.
           </p>
           <div className="mb-4">
-            {SNLxx.map((item) => {
+            {ELSOxx.map((item) => {
               return (
                 <div key={item.number} className="flex gap-3 ">
                   <p className="py-2 px-3  border-t-[3px] border-[#31F3FF]">
@@ -127,10 +109,10 @@ export default function SNLxxSection() {
       <div className="mb-20 text-center flex justify-center lg:text-lg text-white max-w-[1500px] mx-auto">
         <div className="px-[3vw] w-full">
           <h2 className="font-semibold text-xl lg:text-2xl mb-8">
-            SNLxx Supported Sensors
+            ELSO.xx Supported Sensors
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {SNLxxCard.map((item) => {
+            {ELSOxxCard.map((item) => {
               return (
                 <PrimeryCard
                   key={item.title}

@@ -1,7 +1,9 @@
 import Image from "next/image";
 import SL300Section from "./SL300Section";
 import SNLxxSection from "./SNLxxSection";
-import IOTSection from "./IOTSection";
+import EliteModbusSection from "./eliteModbus";
+import EnvironmentalMonitoringSection from "./environmentalMonitoring";
+import Slider from "./slider/slider"
 export default function Home() {
   return (
     <div className=" ">
@@ -22,7 +24,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-1 lg:gap-2">
             <p className="text-white text-2xl sm:text-3xl md:text-[40px] lg:text-7xl font-bold">
-              Elitech
+              Elite Technology
             </p>
             <p className="text-white text-2xl sm:text-3xl md:text-[40px] lg:text-7xl font-bold">
               Digital Solution
@@ -45,30 +47,75 @@ export default function Home() {
         <div className="mb-20 text-center flex justify-center lg:text-lg text-white max-w-[1200px] mx-auto">
           <div className="w-[90%] lg:w-[70%]">
             <h2 className="font-semibold text-xl lg:text-2xl mb-5">
-              Welcome to Elitech Digital Solution
+              Welcome to Elidiso – Elite Technology Digital Solutions
             </h2>
             <p>
-              Founded three years ago, Elitech Digital Solution is dedicated to
-              producing innovative IoT solutions that enhance environmental
-              monitoring systems. Our mission is to create smart technologies
-              that make your world safer and more efficient.
-            </p>
-            <p>
-              At Elitech, we specialize in developing user-friendly devices that
-              provide secure, real-time data, empowering businesses and
-              individuals to monitor their surroundings effortlessly. We believe
-              in a connected and eco-friendly future and strive to integrate
-              technology in a way that benefits both users and the planet.
-            </p>
-            <p>
-              Join us on our journey to make technology work for you, creating a
-              smarter and more sustainable world.
+              At Elidiso, we believe IoT technology should make life easier,
+              smarter, and more connected. We specialize in providing reliable
+              IoT monitoring devices, smart environmental sensors, and
+              user-friendly real-time monitoring software for businesses across
+              the world. Whether you need to track temperature, humidity, air
+              quality, or other critical environmental conditions, or require
+              dependable card printers and predictive maintenance services, our
+              solutions help you monitor, protect, and optimize operations with
+              confidence.
             </p>
           </div>
         </div>
+        <div className="mb-20 text-center flex justify-center lg:text-lg text-white max-w-[1200px] mx-auto gap-4">
+          <div className="w-[90%] shadow-2xl p-4 rounded-2xl border hover:scale-105 transition-all duration-500 lg:w-[70%]">
+            <p className="font-semibold text-xl lg:text-2xl mb-5">
+              What We Offer:
+            </p>
+            <ul className=" grid justify-start text-start list-disc pl-6 space-y-2  leading-relaxed">
+              <li>
+                IoT Environmental Monitoring: Keep an eye on temperature,
+                humidity, smoke, water, and more.
+              </li>
+              <li>
+                Network & Gateway Solutions: Connect your sensors securely with
+                Modbus & SNMPv3 devices.
+              </li>
+              <li>
+                Monitoring Software (EMS): See real-time data, get alerts, and
+                automate your systems effortlessly.
+              </li>
+              <li>
+                Card Printers & Maintenance: Reliable printers and quick support
+                when you need it.
+              </li>
+            </ul>
+          </div>{" "}
+          <div className="w-[90%] shadow-2xl p-4 rounded-2xl border hover:scale-105 transition-all duration-500 lg:w-[70%]">
+            <h2 className="font-semibold text-xl lg:text-2xl mb-5">
+              Key Services / What we do:
+            </h2>
+            <p>
+              {" "}
+              At Elidiso, we make it simple to monitor, protect, and manage your
+              environments with smart IoT sensors, secure gateways, and
+              easy-to-use software.
+            </p>{" "}
+          </div>
+        </div>
+        <div className="mb-20 text-center flex flex-col items-center justify-center lg:text-lg text-white max-w-[1200px] mx-auto gap-4">
+          <div className="w-[90%] shadow-2xl p-4 rounded-2xl border hover:scale-105 transition-all duration-500 lg:w-[70%]">
+            <h2 className="font-semibold text-xl lg:text-2xl mb-5">
+              Products
+            </h2>
+            <p>
+              {" "}
+              Discover our smart solutions designed to make environmental monitoring simple, reliable, and efficient. From advanced sensors to secure network gateways and intuitive software, our products give you real-time insight and control—helping your operations run smoothly and safely, wherever you are.
+            </p>{" "}
+          </div>
+          
+       <Slider/>
+          
+        </div>
         <SL300Section />
         <SNLxxSection />
-        <IOTSection />
+        <EliteModbusSection />
+        <EnvironmentalMonitoringSection/>
       </div>
     </div>
   );

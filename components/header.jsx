@@ -9,11 +9,11 @@ export default function Header() {
     { name: "Home", link: "/" },
     { name: "product", link: "/product" },
     { name: "About", link: "/aboutUs" },
-    { name: "SL300", link: "#SL300" },
-    { name: "SNLxx", link: "#SNLxx" },
-    { name: "IoT Software", link: "#IoT" },
-    { name: "Applications", link: "#Applications" },
-    { name: "Contact", link: "/contact" },
+    // { name: "SL300", link: "#SL300" },
+    // { name: "SNLxx", link: "#SNLxx" },
+    // { name: "IoT Software", link: "#IoT" },
+    // { name: "Applications", link: "#Applications" },
+    // { name: "Contact", link: "/contact" },
     { name: "blog", link: "/blog" },
   ];
 

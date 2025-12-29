@@ -4,12 +4,10 @@ import { useState, useEffect } from "react";
 
 export default function AboutUs() {
   const list = [
-    { title: "Introduction", id: 1 },
-    { title: "Cards", id: 2 },
-    { title: "Software", id: 3 },
-    { title: "IOT", id: 4 },
-    { title: "HARDWARE", id: 5 },
-    { title: "BUSINESS", id: 6 },
+    { title: "Who We Are ", id: 1 },
+    { title: "What We Do", id: 2 },
+    { title: "Our Mission", id: 3 },
+    { title: "Why Choose Elidiso?", id: 4 },
   ];
 
   const [active, setActive] = useState(1);
@@ -28,28 +26,12 @@ export default function AboutUs() {
       return (
         <div className="grid mt-10 gap-4 text-justify text-[#d3d3d3] text-[1rem] lg:grid-cols-2">
           <div>
-            Sepehr Anformatic Derakhshan began its journey in 1993, providing
-            services in the fields of computing, informatics, and modern
-            technologies. Over the years, the company has gained specialized
-            knowledge in systems for issuing identification, credit, smart, and
-            access cards. Our partnerships and representation of international
-            companies such as MATICA, OASYS, LAPIS, and INTERLOCKAG in the card
-            issuance systems sector have enabled us to offer the most up-to-date
-            services in this field. Successfully executing hundreds of major
-            national projects in ministries, institutions, airports,
-            organizations, universities, associations, large industrial
-            factories, hospitals, hotels, and more is among Sepehr Anformatic
-            Derakhshan’s achievements.
-          </div>
-          <div>
-            In recent years and after years of professional experience and
-            training skilled and versatile engineers and experts, we have
-            gathered valuable information in this field. Today, we are
-            presenting the most recent and up-to-date software, hardware,
-            intelligent solutions, and IoT (Internet of Things). At Sepehr
-            Anformatic Derakhshan, we put our customers’ needs and demands as a
-            priority. Moreover, presenting the best possible services with
-            highly developed technology is crucial and significant for us.
+            At Elidiso, we’re a team trying to solve real problems with smart
+            IoT solutions. Our connected systems are simple to use, fast to
+            deploy, and built to last. We help companies across the MEA region
+            monitor essential environments, reduce operational risks, and
+            improve performance through reliable environmental monitoring
+            devices and digital IoT platforms.
           </div>
         </div>
       );
@@ -59,26 +41,35 @@ export default function AboutUs() {
           <div>
             <ul className="list-disc space-y-2 pl-6">
               <li>
-                The Card and PVC Card Printing Services Department is one of the
-                most experienced teams in the market. Comprising professional
-                technical and marketing experts in card printer equipment, this
-                team also provides software and related services that
-                significantly assist organizations in issuing identification
-                cards and managing visitors. Some of the services offered by
-                this team include:
-                <ul className="list-disc pl-6 space-y-1 mt-2">
-                  <li>PVC Card Printing Services</li>
-                  <li>
-                    Supply of various printers for issuing identification,
-                    smart, and access cards
-                  </li>
-                  <li>Provision of card and passport lamination devices</li>
-                  <li>Laser card personalization</li>
-                  <li>
-                    Production of various identification, banking, and smart
-                    card bodies
-                  </li>
-                </ul>
+                <span className="font-semibold">Smart IoT Monitoring</span>{" "}
+                <br />
+                We offer a wide range of IoT devices and smart sensors designed
+                to collect accurate environmental data. From standalone sensors
+                to multi-parameter Modbus-supported systems, our devices help
+                you monitor temperature, humidity, air quality, and water
+                leakage, and other essential parameters, all at once.
+              </li>
+              <li>
+                {" "}
+                <span className="font-semibold">
+                  Network Monitoring & Analytics
+                </span>
+                <br />
+                Our IoT monitoring software lets you view your data in real
+                time, receive alerts, track changes, and generate actionable
+                reports through a clean, user-friendly dashboard. Remote
+                monitoring solutions make managing multiple sites simple and
+                efficient.
+              </li>
+              <li>
+                <span className="font-semibold">
+                  Card Printers & Maintenance Services
+                </span>
+                <br />
+                We provide high-quality card printers and reliable maintenance
+                services, ensuring your equipment operates smoothly. Our support
+                team is always ready to assist and guarantee fast repairs and
+                minimal downtime.
               </li>
             </ul>
           </div>
@@ -91,15 +82,10 @@ export default function AboutUs() {
       return (
         <div className="grid mt-10 gap-4 text-justify text-[#d3d3d3] text-[1rem] lg:grid-cols-2">
           <div>
-            The Sepehr Anformatic Derakhshan software team, backed by years of
-            experience in developing office automation software, leverages the
-            latest technologies and the technical expertise of its human
-            resources to meet the diverse needs of organizations and customers.
-            <br />
-            The system analysis team in this department provides optimal
-            solutions in card services, client management, office automation,
-            and more, greatly assisting the customers in the needs assessment
-            process.
+            Our mission is to bring innovation, accuracy, and reliability into
+            everyday operations. We empower businesses to transform the way they
+            monitor environments through smart digital solutions that are easy
+            to use and easy to trust.
           </div>
           <div className="flex justify-center items-center">
             <Image src="/images/desktop.png" width={230} height={235} alt="" />
@@ -109,69 +95,18 @@ export default function AboutUs() {
     if (id === 4)
       return (
         <div className="grid mt-10 gap-4 text-justify text-[#d3d3d3] text-[1rem] lg:grid-cols-2">
-          <div>
-            The IoT department, supported by the research and development team
-            and a combination of software and hardware experts, leverages
-            cutting-edge technical knowledge to provide smart solutions for data
-            centers and document rooms using the latest implementation methods.
-            <br />
-            The R&D team in this department is well-versed in the newest IoT
-            methodologies and architectures, as well as in implementing various
-            node communication protocols. This enables them to offer consulting
-            and innovative IoT solutions.
-            <br />
-            Additionally, utilizing the technical expertise of the electronics
-            team, the department can design and produce IoT devices, gateways,
-            and sensors.
-          </div>
+          <ul className="list-disc space-y-2 pl-6">
+            <li> Easy-to-use IoT monitoring solutions</li>
+            <li> Accurate and reliable environmental sensors</li>
+            <li> Modbus integration for more efficient data collection</li>
+            <li> Dedicated support and fast maintenance services</li>
+            <li> A customer-first, friendly approach</li>
+          </ul>
           <div className="flex justify-center items-center">
             <Image src="/images/work.png" width={336} height={340} alt="" />
           </div>
         </div>
       );
-    if (id === 5)
-      return (
-        <div className="grid mt-10 gap-4 text-justify text-[#d3d3d3] text-[1rem] lg:grid-cols-2">
-          <div>
-            The Sepehr Anformatic Derakhshan hardware team was established
-            through our collaboration with Digital Identification (MATICA) to
-            provide maintenance and service of card printers for customers.
-            <br />
-            With nearly a quarter-century of experience in delivering optimal
-            solutions and a team of expert technicians, we are ready to offer
-            maintenance services for all existing card printers (MATICA, Fargo,
-            Magicard, Smart, Zebra, Nisca, and more).
-            <br />
-            Additionally, this team possesses advanced technical knowledge and
-            cutting-edge equipment, enabling them to design and produce
-            electronic boards
-          </div>
-          <div className="flex justify-center items-start">
-            <Image src="/images/chip.png" width={776} height={796} alt="" />
-          </div>
-        </div>
-      );
-    if (id === 6)
-      return (
-        <div className="grid mt-10 gap-4 text-justify text-[#d3d3d3] text-[1rem] lg:grid-cols-2">
-          <div>
-            Having a clear strategy in digital marketing is one of the most
-            important factors for success. Large companies typically have
-            separate departments for SEO, social media, online advertising, and
-            public relations, all of which need to be consistently
-            interconnected.
-            <br />
-            To achieve success, it’s essential to conduct an analysis and
-            develop an effective strategy that outlines the specific roles of
-            each team and the techniques needed to reach their goals. All of the
-            top 10 digital marketing companies have well-defined strategies.
-          </div>
-          <div className="flex justify-center items-start">
-            <Image src="/images/business.png" width={776} height={796} alt="" />
-          </div>
-        </div>
-      );
-    return null;
   };
 
   return (
@@ -180,7 +115,7 @@ export default function AboutUs() {
         {/* ============== DESKTOP MODE ============== */}
         {!isMobile && (
           <>
-            <div className="text-gray-800 mb-18 max-w-[800px] mx-auto relative   text-xs md:text-sm grid justify-center lg:grid-cols-6 w-full gap-4">
+            <div className="text-gray-800 mb-18  mx-auto relative   text-xs md:text-sm grid justify-center lg:grid-cols-4 w-fit gap-20">
               {list.map((item) => (
                 <button
                   onClick={() => setActive(item.id)}
@@ -194,7 +129,9 @@ export default function AboutUs() {
                   <p>{item.title}</p>
                 </button>
               ))}
-              <hr className="w-full col-span-6 absolute top-[50%] border-amber-50 border-dashed" />
+              
+                <hr className="w-full col-span-3 absolute top-[50%] border-amber-50 border-dashed" />
+              
             </div>
 
             {/* Desktop Content */}
@@ -246,8 +183,13 @@ export default function AboutUs() {
       </div>
       <div className="lg:w-fit grid justify-center mx-auto gap-2 w-[90%]">
         <p className="text-[#d3d3d3] text-[1rem]">
-          We are not a team because we work together we are a team because we
-          respect, trust, and care for each other.
+          We’re here to help you monitor, protect, and improve your environments
+          with technology that actually works.
+        </p>
+        <p className="text-[#d3d3d3] text-[1rem]">
+          Want to learn more about our IoT solutions, environmental monitoring
+          systems, or smart sensors? Reach out today, we’re always happy to
+          help.{" "}
         </p>
         <button className="w-fit hover:bg-gray-200 bg-white px-3 py-2 rounded mx-auto">
           SEND CV
