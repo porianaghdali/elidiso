@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import CustomSelect from "../../ui/customSelect";
+import CustomSelect from "../../../ui/customSelect";
 
 export default function Product() {
   const [products, setProducts] = useState([]);

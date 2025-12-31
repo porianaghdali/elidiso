@@ -1,11 +1,16 @@
 import Link from "next/link";
-import { client } from "../../sanity/lib/client";
+import { client } from "../../../sanity/lib/client";
 
 async function getData() {
   const data = await client.fetch(`*[_type=="post"]{
     title,
     slug,
-    publishedAt,author,"imageUrl": mainImage.asset->url
+    publishedAt,author->{
+  name,
+  bio,
+  image
+}
+,"imageUrl": mainImage.asset->url
    
   }`);
   return data;
@@ -15,7 +20,7 @@ export const revalidate = 60;
 
 export default async function BlogPage() {
   const articles = await getData();
-  console.log(articles, "articles");
+  console.log(articles);
   return (
     <div className="px-[5vw] py-[5vw]">
       <h1 className="text-3xl font-bold mb-6 text-white">Blog</h1>

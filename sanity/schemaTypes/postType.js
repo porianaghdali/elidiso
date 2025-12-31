@@ -47,9 +47,47 @@ export const postType = defineType({
       type: 'datetime',
     }),
     defineField({
-      name: 'body',
-      type: 'blockContent',
-    }),
+  name: 'body',
+  type: 'array',
+  title: 'Body',
+  of: [
+    { type: 'block' },
+    {
+      type: 'image',
+      options: { hotspot: true },
+      fields: [
+        {
+          name: 'align',
+          title: 'Alignment',
+          type: 'string',
+          options: {
+            list: [
+              { title: 'Center', value: 'center' },
+              { title: 'Right', value: 'right' },
+              { title: 'Left', value: 'left' },
+            ],
+            layout: 'radio',
+          },
+          initialValue: 'center',
+        },
+        {
+          name: 'fullWidth',
+          type: 'boolean',
+          title: 'Full width?',
+          initialValue: false,
+        },
+        {
+          name: 'maxWidth',
+          type: 'number',
+          title: 'Max width (px)',
+          description: 'مثلاً 400 یا 600',
+        },
+      ],
+    },
+  ],
+}
+
+),
   ],
   preview: {
     select: {
